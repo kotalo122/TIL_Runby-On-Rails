@@ -1,0 +1,34 @@
+以下３通り
+2個目は記述が少ない
+範囲演算子 n..m
+sumメソッド　　sum = (n..m).sum
+
+def sum_number(n, m)  
+  start = n
+  ss = 0
+  while start <= m
+    ss += start
+    start += 1
+  end
+   puts ss
+end
+sum_number(5,15)
+
+-----------------------
+def sum_number(n, m)
+  sum = (n..m).sum
+  puts sum
+end
+sum_number(5, 15)
+-----------------------
+
+def sum_number(n, m)
+  total = 0 
+  while n <= m 
+    total = total + n 
+    n = n + 1
+  end
+  puts total
+end
+sum_number(5, 15)
+----------------------
