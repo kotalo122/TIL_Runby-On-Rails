@@ -1,0 +1,35 @@
+bundle install と yarn installの違いについて
+
+まとめ
+・bundle install と yarn installの両方とも、ライブラリをインストールするコマンドで、インストールするものがアプリ内で使えるかどうかをチェックしている。
+・違いはbundle installの対象がgemで、yarnはそのJavaScript版である。
+
+bundle install
+yarn install
+※ライブラリとは、他のプログラムと組み合わせて使用するために、複雑なプログラムを1つのセットにしたもの。
+
+バージョン
+rubyのバージョン　ruby-2.6.5
+Railsのバージョン Rails:6.0.0
+
+bundle install と yarn installの共通点
+・ライブラリをインストールしている
+・installするライブラリが「アプリケーションで使用できるかどうか」をチェックしている
+・installするライブラリが、使用言語等のバージョンと一致しているかどうかをチェックしている
+（一致：ライブラリが使用できるかどうかの観点で一致しているかどうか）
+
+bundle install と yarn installの相違点
+・bundle install → installするライブラリがgem
+・yarn install → installするライブラリがJavaScriptについてのライブラリ
+
+bundle installとは
+ライブラリをインストールするコマンドで、インストールする者がアプリ内で使えるかどうかをチェックしている。
+
+bundlerというgemが他のgemのバージョンを管理しており、使用言語等のバージョンを含めて、gem同士でアプリ内で使用できるかをチェックしている。
+
+yarn installとは
+ライブラリをインストールするコマンドで、インストールする者がアプリ内で使えるかどうかをチェックしている
+bundleインストールのJavaScript版
+
+yarnはパッケージマネージャーであり、gemのbunderのようなものである。
+javascriptに関係するパッケージ（ライブラリをまとめたもの）のバージョンを管理して、ライブラリ同士でアプリ内で使用できるかをチェックしている。
