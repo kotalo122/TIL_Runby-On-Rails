@@ -1,0 +1,37 @@
+アプリケーションを作成
+ターミナル
+
+# projectsディレクトリに移動
+% cd ~/〇〇
+
+# バージョンとデータベースを指定してRailsアプリケーションを作成
+% rails _6.0.0_ new アプリ名 -d mysql  
+
+# 作成したアプリケーションのディレクトリに移動
+% cd アプリ名
+database.ymlを編集
+encoding: utf8mb4 → encoding: utf8に変更
+config/database.yml
+
+#省略
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: root
+  password:
+  socket: /tmp/mysql.sock
+#省略
+データベースを作成
+ターミナル
+
+# データベースを作成
+% rails db:create
+
+
+deviseの導入やその他のマイグレーションファイルのコードを記述した後はails db:migrateを実行
+ターミナル
+```
+% rails db:migrate
+```
+
